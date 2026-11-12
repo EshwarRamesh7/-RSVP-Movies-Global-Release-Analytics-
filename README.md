@@ -1,58 +1,37 @@
+# RSVP Movies — SQL Analytics for Global Release Strategy
 
-SQL-based data analysis project for RSVP Movies to identify factors influencing global film performance and guide strategy for an international release in 2022. Includes data exploration, business insights, and recommendations.
+A MySQL case study using movie metadata, genres, ratings and people/role mappings to explore factors relevant to a production company's global release strategy.
 
-# 🎬 RSVP Movies — Global Release Analytics (SQL Project)
+**Tools:** MySQL · SQL · Joins · Subqueries · CTEs · Aggregations · Window functions
 
-## 📄 Project Overview
-This project analyzes three years of movie release data for **RSVP Movies**, an Indian film production company.  
-The objective is to uncover insights that can guide their strategy for an upcoming **global movie release in 2022**, using SQL for data analysis and reporting.
+## Business question
 
----
+What patterns in genre volume, release timing, ratings, audience votes and production talent can help a production company frame decisions for an international release?
 
-## 🎯 Business Objective
-- Identify key factors influencing movie performance in different markets.  
-- Analyze relationships between genres, budgets, revenues, and audience ratings.  
-- Derive insights to optimize release timing, marketing strategy, and regional targeting.  
-- Recommend strategies for successful global expansion.
+## Data model
 
----
+The SQL script references relational tables including `movie`, `genre`, `ratings`, `names`, `director_mapping` and `role_mapping`. These tables connect film metadata with genres, ratings and people/roles.
 
-## 🧩 Dataset Description
-The dataset includes information on movies released over the last three years, containing:
-- **Movie Details:** title, genre, language, runtime, release date  
-- **Performance Metrics:** box office revenue, budget, ROI  
-- **Audience & Ratings:** IMDb scores, number of votes, review sentiment  
-- **Market Data:** country, region, and language of release  
+## Analysis
 
----
+The SQL script explores table sizes and missing values, release volumes by year and month, genre counts and ranking, average duration by genre, ratings and movie rankings, highly rated production companies, directors and actors associated with highly rated movies, and country-level vote comparisons.
 
-## ⚙️ Tools & Technologies
-- **Language:** SQL  
-- **Environment:** MySQL / PostgreSQL  
-- **Concepts Used:** Joins, Subqueries, CTEs, Aggregations, Grouping, and Ranking  
-- **Deliverables:** SQL script file and an executive summary report (PDF)
+The project demonstrates joins, subqueries, CTEs, grouping, filtering, conditional aggregation and window functions.
 
----
+## Deliverables
 
-## 🧹 Analysis Approach
-1. Imported and explored the dataset using SQL.  
-2. Used `JOIN` and `GROUP BY` operations to combine and aggregate insights from multiple tables.  
-3. Applied **CTEs (Common Table Expressions)** for modular and readable queries.  
-4. Performed descriptive analysis on genres, countries, and revenues.  
-5. Derived insights and business recommendations based on data patterns.
+- `IMDB_solution file.sql` — SQL analysis.
+- `Executive Summary.pdf` — project summary.
+- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — project explanation and interview preparation.
 
----
+## Important interpretation note
 
-## 💡 Key Insights
-- Family and Drama genres showed strong cross-market performance.  
-- Movies with shorter runtimes and localized subtitles had higher audience engagement.  
-- Consistent marketing and release timing during festival periods increased revenue.  
-- Verified reviews and post-release audience sentiment correlated strongly with box office success.
+Several joins involve one-to-many relationships, such as movie-to-genre and movie-to-role mappings. Aggregations should account for join multiplication. When counting films, use distinct movie identifiers where the join grain requires it. The script contains query-level output comments; validate results against the database before quoting specific figures.
 
----
+## Interview preparation
 
-## 📁 Project Structure
+See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
 
+## Author
 
-[IMDB_solution file.sql](https://github.com/user-attachments/files/23299478/IMDB_solution.file.sql)
-[Executive Summary.pdf](https://github.com/user-attachments/files/23299486/Executive.Summary.pdf)
+**Eshwar Ramesh** · [GitHub](https://github.com/EshwarRamesh7) · [Portfolio](https://eshwarrameshportfolio.netlify.app) · [LinkedIn](https://www.linkedin.com/in/eshwar-ramesh-9a4652251)
