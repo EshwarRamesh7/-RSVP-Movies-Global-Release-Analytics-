@@ -22,15 +22,11 @@ The project demonstrates joins, subqueries, CTEs, grouping, filtering, condition
 
 - `IMDB_solution file.sql` — SQL analysis.
 - `Executive Summary.pdf` — project summary.
-- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — project explanation and interview preparation.
 
 ## Important interpretation note
 
 Several joins involve one-to-many relationships, such as movie-to-genre and movie-to-role mappings. Aggregations should account for join multiplication. When counting films, use distinct movie identifiers where the join grain requires it. The script contains query-level output comments; validate results against the database before quoting specific figures.
 
-## Interview preparation
-
-See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
 
 ## Author
 
